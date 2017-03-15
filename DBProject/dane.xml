@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	<hill>
+		<Hid>7</Hid>
+		<Hname>Skalite</Hname>
+		<Hlength>106</Hlength>
+		<Hcity>Szczyrk</Hcity>
+		<HcreateDate>1937-02-14</HcreateDate>
+		<HkPoint>95</HkPoint>
+	</hill>
+	<trainer>
+		<Tid>4</Tid>
+		<Tname>Jan</Tname>
+		<Tsurname>Szturc</Tsurname>
+		<Tdate>1958-05-16</Tdate>
+		<Tcountry>Polska</Tcountry>
+	</trainer>
+	<records>
+		<Rid>8</Rid>
+		<RskijumperId>3</RskijumperId>
+		<RrodzajRekordu>Aktualny</RrodzajRekordu>
+		<Rlength>104</Rlength>
+		<Rdate>2008-02-17</Rdate>
+		<RtrainerId>4</RtrainerId>
+		<RhillId>7</RhillId>
+	</records>
+	<hill>
+		<Hid>8</Hid>
+		<Hname>Bloudkova velikanka</Hname>
+		<Hlength>139</Hlength>
+		<Hcity>Planica</Hcity>
+		<HcreateDate>1934-12-03</HcreateDate>
+		<HkPoint>125</HkPoint>
+	</hill>
+	<records>
+		<Rid>9</Rid>
+		<RskijumperId>3</RskijumperId>
+		<RrodzajRekordu>Aktualny</RrodzajRekordu>
+		<Rlength>104</Rlength>
+		<Rdate>2014-03-22</Rdate>
+		<RtrainerId>4</RtrainerId>
+		<RhillId>8</RhillId>
+	</records>
+</data>

@@ -1,0 +1,29 @@
+SET DATESTYLE TO DMY;
+
+CREATE TABLE trainers(trainer_id INTEGER PRIMARY KEY NOT NULL,trainer_name VARCHAR(255) NOT NULL,trainer_surname VARCHAR(255) NOT NULL,date DATE NOT NULL,country VARCHAR(255) NOT NULL);
+
+CREATE TABLE skijumpers(skijumper_id INTEGER PRIMARY KEY NOT NULL,jumper_name VARCHAR(255) NOT NULL,jumper_surname VARCHAR(255) NOT NULL,date DATE NOT NULL,country VARCHAR(255) NOT NULL);
+
+CREATE TABLE hill (hill_id INTEGER PRIMARY KEY, hill_name VARCHAR(255) NOT NULL, hill_length FLOAT NOT NULL,place VARCHAR(255) NOT NULL,create_date DATE NOT NULL,k_point FLOAT NOT NULL);
+
+CREATE TABLE records (id INTEGER PRIMARY KEY NOT NULL, skijumper_id INTEGER NOT NULL, rodzaj_rekordu VARCHAR(255) NOT NULL,record_length FLOAT NOT NULL, record_date DATE NOT NULL,trainer_id INTEGER NOT NULL, hill_id INTEGER, FOREIGN KEY (skijumper_id) REFERENCES skijumpers(skijumper_id) ON UPDATE CASCADE ON DELETE RESTRICT, FOREIGN KEY (trainer_id) REFERENCES trainers(trainer_id) ON UPDATE CASCADE ON DELETE RESTRICT, FOREIGN KEY (hill_id) REFERENCES hill(hill_id) ON UPDATE CASCADE ON DELETE RESTRICT);
+
+insert into trainers values (1, 'Lukasz', 'Kruczek', '01-11-1975', 'Polska');
+insert into trainers values (2, 'Stefan', 'Horngacher', '20-09-1969', 'Austria');
+
+
+insert into skijumpers values (1, 'Kamil', 'Stoch', '25-05-1987', 'Polska');
+insert into skijumpers values (2, 'Adam', 'Malysz', '03-12-1977', 'Polska');
+insert into skijumpers values (3, 'Piotr', 'Zyla', '16-01-1987', 'Polska');
+
+insert into hill values (1, 'Hansa Rennera', 140, 'Oberhof', '01-01-1964', 120);
+insert into hill values (2, 'Adama Malysza', 134, 'Wisla', '05-09-2006', 120);
+insert into hill values (3, 'Gornyj Gigant', 140, 'Almaty', '25-09-2010', 125);
+
+insert into records values (1, 1, 'Letni, nieoficjalny', 136, '24-09-2010',1,3);
+insert into records values (2, 1, 'Letni, nieaktualny', 134.5, '19-08-2010',1,2);
+insert into records values (3, 1, 'Zimowy, nieaktualny', 132, '14-02-2009',1,2);
+insert into records values (4, 1, 'Letni', 140, '03-10-2007',1,1);
+
+INSERT INTO records (id, skijumper_id, rodzaj_rekordu, record_lenght, trainer_id, hill_id) values (5, 6, 140, 7,5, 'sdfgch');
+

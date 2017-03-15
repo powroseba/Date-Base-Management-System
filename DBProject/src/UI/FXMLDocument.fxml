@@ -1,0 +1,1019 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="694.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.FXMLDocumentController">
+   <children>
+      <HBox prefHeight="20.0" prefWidth="694.0">
+         <children>
+            <MenuBar minWidth="-Infinity" prefHeight="25.0" prefWidth="694.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                        <MenuItem fx:id="MenuXML" disable="true" mnemonicParsing="false" text="Import XML" />
+                        <MenuItem fx:id="MenuConnect" mnemonicParsing="false" text="Connect" />
+                        <MenuItem fx:id="MenuDisconnect" mnemonicParsing="false" text="Disconnect" />
+                    <MenuItem fx:id="MenuClose" mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                        <MenuItem fx:id="MenuClear" mnemonicParsing="false" text="Clear" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                        <MenuItem fx:id="MenuDoc" mnemonicParsing="false" text="Show Documentation" />
+                        <MenuItem fx:id="Menu_Guide" mnemonicParsing="false" text="Show user guide" />
+                    <MenuItem fx:id="MenuAbout" mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </MenuBar>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <Pane layoutY="29.0" prefHeight="502.0" prefWidth="694.0">
+         <children>
+            <TabPane fx:id="PanelTab" prefHeight="502.0" prefWidth="694.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab fx:id="Jumper_Data" text="Jumper Data">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutY="14.0" prefHeight="30.0" prefWidth="694.0" spacing="5.0">
+                                 <opaqueInsets>
+                                    <Insets left="5.0" right="5.0" />
+                                 </opaqueInsets>
+                                 <children>
+                                    <Label fx:id="Jumper_IdLabel" text="ID">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Jumper_IdField" prefHeight="25.0" prefWidth="41.0" promptText="ID">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="Jumper_NameLabel" layoutX="20.0" layoutY="15.0" text="Name">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Jumper_NameField" prefHeight="25.0" prefWidth="117.0" promptText="Name">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="Jumper_SurnameLabel" layoutX="81.0" layoutY="15.0" text="Surname">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Jumper_SurnameField" layoutX="117.0" layoutY="12.0" prefHeight="25.0" prefWidth="117.0" promptText="Surname">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="-1.0" layoutY="44.0" prefHeight="36.0" prefWidth="694.0" spacing="5.0">
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="6.0" />
+                                 </padding>
+                                 <children>
+                                    <Label fx:id="Jumper_NationalityLabel" text="Nationality">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Jumper_NationalityField" prefHeight="25.0" prefWidth="153.0" promptText="Nationality">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="Jumper_DateLabel" text="Date of birth">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <DatePicker fx:id="Jumper_DatePicker" prefHeight="25.0" prefWidth="121.0" promptText="Date of birth">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </DatePicker>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutY="80.0" prefHeight="35.0" prefWidth="694.0" spacing="10.0">
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="5.0" />
+                                 </padding>
+                                 <children>
+                                    <RadioButton fx:id="Jumper_Insert" mnemonicParsing="false" text="Insert">
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="grupa1" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="Jumper_Remove" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" text="Remove" toggleGroup="$grupa1">
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <RadioButton fx:id="Jumper_Update" layoutX="339.0" layoutY="17.0" mnemonicParsing="false" text="Update" toggleGroup="$grupa1">
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <RadioButton fx:id="Jumper_Show" layoutX="383.0" layoutY="17.0" mnemonicParsing="false" selected="true" text="Show Data" toggleGroup="$grupa1">
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <Region prefHeight="30.0" prefWidth="173.0" HBox.hgrow="ALWAYS" />
+                                    <Button fx:id="Jumper_Submit" mnemonicParsing="false" text="Submit">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="Jumper_Clear" layoutX="481.0" layoutY="20.0" mnemonicParsing="false" text="Clear">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Pane layoutY="138.0" prefHeight="313.0" prefWidth="694.0">
+                                 <children>
+                                    <TableView fx:id="Jumper_Table" layoutX="1.0" layoutY="-3.0" prefHeight="319.0" prefWidth="692.0">
+                                       <contextMenu>
+                                          <ContextMenu fx:id="JumperContext_Menu" autoFix="false" height="100.0" width="100.0">
+                                            <items>
+                                              <MenuItem fx:id="JumperContext_Delete" mnemonicParsing="false" onAction="#deleteFromContext" text="Delete" />
+                                                <MenuItem fx:id="JumperContext_Clear" mnemonicParsing="false" onAction="#clearTables" text="Clear" />
+                                            </items>
+                                          </ContextMenu>
+                                       </contextMenu></TableView>
+                                    <Pane fx:id="Jumper_UpdatePane" layoutX="1.0" prefHeight="70.0" prefWidth="694.0" visible="false">
+                                       <children>
+                                          <HBox alignment="CENTER" layoutY="30.0" prefHeight="36.0" prefWidth="694.0" spacing="5.0">
+                                             <children>
+                                                <Label fx:id="Jumper_NationalityUpdateLabel" text="Nationality">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="Jumper_NationalityUpdateField" prefHeight="25.0" prefWidth="153.0" promptText="Nationality">
+                                                   <HBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label fx:id="Jumper_DateUpdateLabel" text="Date of birth">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <DatePicker fx:id="Jumper_DateUpdatePicker" prefHeight="25.0" prefWidth="121.0" promptText="Date of birth">
+                                                   <HBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </HBox.margin>
+                                                </DatePicker>
+                                             </children>
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" top="6.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="30.0" prefWidth="694.0" spacing="5.0">
+                                             <children>
+                                                <Label fx:id="Jumper_IdUpdateLabel" text="ID">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="Jumper_IdUpdateField" prefHeight="25.0" prefWidth="41.0" promptText="ID">
+                                                   <HBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label fx:id="Jumper_NameUpdateLabel" layoutX="20.0" layoutY="15.0" text="Name">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="Jumper_NameUpdateField" prefHeight="25.0" prefWidth="117.0" promptText="Name">
+                                                   <HBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label fx:id="Jumper_SurnameUpdateLabel" layoutX="81.0" layoutY="15.0" text="Surname">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="Jumper_SurnameUpdateField" layoutX="117.0" layoutY="12.0" prefHeight="25.0" prefWidth="117.0" promptText="Surname">
+                                                   <HBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets left="5.0" right="5.0" />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" />
+                                             </padding>
+                                          </HBox>
+                                          <Label fx:id="Jumper_UpdateLabel" alignment="CENTER" contentDisplay="CENTER" text="New Values" textAlignment="CENTER" translateX="319.0" translateY="-21.0" visible="false" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab fx:id="Trainer_Data" text="Trainer Data">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutY="14.0" prefHeight="30.0" prefWidth="694.0" spacing="5.0">
+                                 <children>
+                                    <Label fx:id="Trainer_IdLabel" text="ID">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Trainer_IdField" prefHeight="25.0" prefWidth="41.0" promptText="ID">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="Trainer_NameLabel" layoutX="20.0" layoutY="15.0" text="Name">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Trainer_NameField" prefHeight="25.0" prefWidth="117.0" promptText="Name">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="Trainer_SurnameLabel" layoutX="81.0" layoutY="15.0" text="Surname">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Trainer_SurnameField" layoutX="117.0" layoutY="12.0" prefHeight="25.0" prefWidth="117.0" promptText="Surname">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets left="5.0" right="5.0" />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="-1.0" layoutY="44.0" prefHeight="36.0" prefWidth="694.0" spacing="5.0">
+                                 <children>
+                                    <Label fx:id="Trainer_NationalityLabel" text="Nationality">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Trainer_NationalityField" prefHeight="25.0" prefWidth="153.0" promptText="Nationality">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="Trainer_DateLabel" text="Date of birth">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <DatePicker fx:id="Trainer_DatePicker" prefHeight="25.0" prefWidth="121.0" promptText="Date of birth">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </DatePicker>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="6.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutY="80.0" prefHeight="35.0" prefWidth="694.0" spacing="10.0">
+                                 <children>
+                                    <RadioButton fx:id="Trainer_Insert" mnemonicParsing="false" text="Insert">
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="grupa4" />
+                                       </toggleGroup>
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <RadioButton fx:id="Trainer_Remove" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" text="Remove" toggleGroup="$grupa4">
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <RadioButton fx:id="Trainer_Update" layoutX="339.0" layoutY="17.0" mnemonicParsing="false" text="Update" toggleGroup="$grupa4">
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <RadioButton fx:id="Trainer_Show" layoutX="383.0" layoutY="17.0" mnemonicParsing="false" selected="true" text="Show Data" toggleGroup="$grupa4">
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <Region prefHeight="30.0" prefWidth="173.0" HBox.hgrow="ALWAYS" />
+                                    <Button fx:id="Trainer_Submit" mnemonicParsing="false" text="Submit">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="Trainer_Clear" layoutX="481.0" layoutY="20.0" mnemonicParsing="false" text="Clear">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <Pane layoutY="138.0" prefHeight="313.0" prefWidth="694.0">
+                                 <children>
+                                    <TableView fx:id="Trainer_Table" layoutX="1.0" prefHeight="319.0" prefWidth="692.0">
+                                       <contextMenu>
+                                          <ContextMenu fx:id="TrainerContext_Menu">
+                                            <items>
+                                              <MenuItem fx:id="TrainerContext_Delete" mnemonicParsing="false" onAction="#deleteFromContext" text="Delete" />
+                                                <MenuItem fx:id="TrainerContext_Clear" mnemonicParsing="false" onAction="#clearTables" text="Clear" />
+                                            </items>
+                                          </ContextMenu>
+                                       </contextMenu></TableView>
+                                    <Pane fx:id="Trainer_UpdatePane" layoutX="1.0" prefHeight="70.0" prefWidth="694.0" visible="false">
+                                       <children>
+                                          <HBox alignment="CENTER" layoutY="30.0" prefHeight="36.0" prefWidth="694.0" spacing="5.0">
+                                             <children>
+                                                <Label fx:id="Trainer_NationalityUpdateLabel" text="Nationality">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="Trainer_NationalityUpdateField" prefHeight="25.0" prefWidth="153.0" promptText="Nationality">
+                                                   <HBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label fx:id="Trainer_DateUpdateLabel" text="Date of birth">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <DatePicker fx:id="Trainer_DateUpdatePicker" prefHeight="25.0" prefWidth="121.0" promptText="Date of birth">
+                                                   <HBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </HBox.margin>
+                                                </DatePicker>
+                                             </children>
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" top="6.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER" prefHeight="30.0" prefWidth="694.0" spacing="5.0">
+                                             <children>
+                                                <Label fx:id="Trainer_IdUpdateLabel" text="ID">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="Trainer_IdUpdateField" prefHeight="25.0" prefWidth="41.0" promptText="ID">
+                                                   <HBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label fx:id="Trainer_NameUpdateLabel" layoutX="20.0" layoutY="15.0" text="Name">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="Trainer_NameUpdateField" prefHeight="25.0" prefWidth="117.0" promptText="Name">
+                                                   <HBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label fx:id="Trainer_SurnameUpdateLabel" layoutX="81.0" layoutY="15.0" text="Surname">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="Trainer_SurnameUpdateField" layoutX="117.0" layoutY="12.0" prefHeight="25.0" prefWidth="117.0" promptText="Surname">
+                                                   <HBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets left="5.0" right="5.0" />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" />
+                                             </padding>
+                                          </HBox>
+                                          <Label fx:id="Trainer_UpdateLabel" alignment="CENTER" contentDisplay="CENTER" text="New Values" textAlignment="CENTER" translateX="319.0" translateY="-21.0" visible="false" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                <Tab fx:id="Records" text="Records">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutY="14.0" prefHeight="30.0" prefWidth="694.0" spacing="5.0">
+                                 <children>
+                                    <Label fx:id="Records_IdLabel" text="ID">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Records_IdField" prefHeight="25.0" prefWidth="41.0" promptText="ID">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="Records_SkiJumperIdLabel" layoutX="20.0" layoutY="15.0" text="Ski Jumper ID">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Records_SkiJumperIdField" prefHeight="25.0" prefWidth="117.0" promptText="Ski Jumper ID">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="Records_LengthLabel" layoutX="81.0" layoutY="15.0" text="Lenght">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Records_LengthField" layoutX="117.0" layoutY="12.0" prefHeight="25.0" prefWidth="117.0" promptText="Length">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="PD_DateLabel" layoutX="238.0" layoutY="15.0">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="Records_DateLabel" layoutX="409.0" layoutY="19.0" text="Date">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <DatePicker fx:id="Records_DatePicker" promptText="Date of record ">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </DatePicker>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets left="5.0" right="5.0" />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="-1.0" layoutY="44.0" prefHeight="36.0" prefWidth="694.0" spacing="5.0">
+                                 <children>
+                                    <Label fx:id="Records_TrainerIDLabel" text="Trainer ID">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Records_TrainerIDField" prefHeight="25.0" prefWidth="153.0" promptText="Trainer ID">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="Records_HillIDLabel" layoutX="235.0" layoutY="19.0" text="Hill ID">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Records_HillIDField" layoutX="268.0" layoutY="14.0" prefHeight="25.0" prefWidth="153.0" promptText="Hill ID">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="Records_TypeLabel" layoutX="372.0" layoutY="25.0" text="Type">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Records_TypeField" layoutX="394.0" layoutY="20.0" prefHeight="25.0" prefWidth="153.0" promptText="Type of record">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="6.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutY="80.0" prefHeight="35.0" prefWidth="694.0" spacing="10.0">
+                                 <children>
+                                    <RadioButton fx:id="Records_Insert" mnemonicParsing="false" text="Insert">
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="grupa2" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="Records_Remove" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" text="Remove" toggleGroup="$grupa2">
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <RadioButton fx:id="Records_Update" layoutX="339.0" layoutY="17.0" mnemonicParsing="false" text="Update" toggleGroup="$grupa2">
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <RadioButton fx:id="Records_ShowData" layoutX="383.0" layoutY="17.0" mnemonicParsing="false" selected="true" text="Show Data" toggleGroup="$grupa2">
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <Region prefHeight="30.0" prefWidth="173.0" HBox.hgrow="ALWAYS" />
+                                    <Button fx:id="Records_Submit" mnemonicParsing="false" text="Submit">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="Records_Clear" layoutX="481.0" layoutY="20.0" mnemonicParsing="false" text="Clear">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <Pane layoutY="138.0" prefHeight="313.0" prefWidth="694.0">
+                                 <children>
+                                    <Pane fx:id="Records_UpdatePane" prefHeight="70.0" prefWidth="694.0" visible="false">
+                                       <children>
+                                          <HBox alignment="CENTER" layoutY="30.0" prefHeight="36.0" prefWidth="694.0" spacing="5.0">
+                                             <children>
+                                                <Label fx:id="Records_TrainerIDUpdateLabel" text="Trainer ID" />
+                                                <TextField fx:id="Records_TrainerIDUpdateField" prefHeight="25.0" prefWidth="153.0" promptText="Trainer ID" />
+                                                <Label fx:id="Records_HillIDUpdateLabel" text="Hill ID" />
+                                                <TextField fx:id="Records_HillIDUpdateField" prefHeight="25.0" prefWidth="153.0" promptText="Hill ID" />
+                                                <Label fx:id="Records_TypeUpdateLabel" text="Type" />
+                                                <TextField fx:id="Records_TypeUpdateField" prefHeight="25.0" prefWidth="153.0" promptText="Type of record" />
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets left="5.0" right="5.0" />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" />
+                                             </padding>
+                                          </HBox>
+                                          <Label fx:id="Records_UpdateLabel" alignment="CENTER" contentDisplay="CENTER" text="New Values" textAlignment="CENTER" translateX="319.0" translateY="-21.0" visible="false" />
+                                          <HBox alignment="CENTER" prefHeight="30.0" prefWidth="694.0" spacing="5.0">
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" top="6.0" />
+                                             </padding>
+                                             <children>
+                                                <Label fx:id="Records_IdUpdateLabel" text="ID">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </Label>
+                                                <TextField fx:id="Records_IdUpdateField" prefHeight="25.0" prefWidth="41.0" promptText="ID" />
+                                                <Label fx:id="Records_SkiJumperIdLabel1" text="Ski Jumper ID">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </Label>
+                                                <TextField fx:id="Records_SkiJumperIdUpdateField" prefHeight="25.0" prefWidth="117.0" promptText="Ski Jumper ID" />
+                                                <Label fx:id="Records_LengthUpdateLabel" text="Lenght">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </Label>
+                                                <TextField fx:id="Records_LengthUpdateField" prefHeight="25.0" prefWidth="117.0" promptText="Length" />
+                                                <Label fx:id="Records_UpdateDateLabel" text="Date">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <DatePicker fx:id="Records_UpdateDatePicker" promptText="Date of record ">
+                                                   <HBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </HBox.margin>
+                                                </DatePicker>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </Pane>
+                                    <TableView fx:id="Records_Table" layoutX="1.0" prefHeight="319.0" prefWidth="692.0">
+                                       <contextMenu>
+                                          <ContextMenu fx:id="RecordsContext_Menu">
+                                            <items>
+                                              <MenuItem fx:id="RecordsContext_Delete" mnemonicParsing="false" onAction="#deleteFromContext" text="Delete" />
+                                                <MenuItem fx:id="RecordsContext_Clear" mnemonicParsing="false" onAction="#clearTables" text="Clear" />
+                                            </items>
+                                          </ContextMenu>
+                                       </contextMenu></TableView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                </Tab>
+                  <Tab fx:id="Hill" text="Hill">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <HBox alignment="CENTER" layoutY="14.0" prefHeight="30.0" prefWidth="694.0" spacing="5.0">
+                                 <children>
+                                    <Label fx:id="Hill_IdLabel" text="ID">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Hill_ID" prefHeight="25.0" prefWidth="41.0" promptText="ID">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="Hill_NameLabel" layoutX="20.0" layoutY="15.0" text="Name of hill">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Hill_NameField" prefHeight="25.0" prefWidth="117.0" promptText="Name of hill">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="Hill_KPointLabel" layoutX="81.0" layoutY="15.0" text="K Point">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Hill_KPointField" layoutX="117.0" layoutY="12.0" prefHeight="25.0" prefWidth="117.0" promptText="K Point">
+                                       <HBox.margin>
+                                          <Insets bottom="-2.0" top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="PD_DateLabel1" layoutX="238.0" layoutY="15.0">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <Label fx:id="Hill_CityLabel" text="City">
+                                       <opaqueInsets>
+                                          <Insets />
+                                       </opaqueInsets>
+                                    </Label>
+                                    <TextField fx:id="Hill_CityField" prefHeight="25.0" prefWidth="117.0" promptText="City" />
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets left="5.0" right="5.0" />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="-1.0" layoutY="44.0" prefHeight="36.0" prefWidth="694.0" spacing="5.0">
+                                 <children>
+                                    <Label fx:id="Hill_LengthLabel" text="Length">
+                                       <HBox.margin>
+                                          <Insets left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <TextField fx:id="Hill_LengthField" prefHeight="25.0" prefWidth="153.0" promptText="Length">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <Label fx:id="Hill_DateLabel" layoutX="235.0" layoutY="19.0" text="Date of create">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <DatePicker fx:id="Hill_DatePicker" promptText="Date of create">
+                                       <HBox.margin>
+                                          <Insets top="2.0" />
+                                       </HBox.margin>
+                                    </DatePicker>
+                                 </children>
+                                 <padding>
+                                    <Insets left="5.0" right="5.0" top="6.0" />
+                                 </padding>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutY="80.0" prefHeight="35.0" prefWidth="694.0" spacing="10.0">
+                                 <children>
+                                    <RadioButton fx:id="Hill_Insert" mnemonicParsing="false" text="Insert">
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                       <toggleGroup>
+                                          <ToggleGroup fx:id="grupa3" />
+                                       </toggleGroup>
+                                    </RadioButton>
+                                    <RadioButton fx:id="Hill_Remove" layoutX="10.0" layoutY="15.0" mnemonicParsing="false" text="Remove" toggleGroup="$grupa3">
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <RadioButton fx:id="Hill_Update" layoutX="339.0" layoutY="17.0" mnemonicParsing="false" text="Update" toggleGroup="$grupa3">
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <RadioButton fx:id="Hill_ShowData" layoutX="383.0" layoutY="17.0" mnemonicParsing="false" selected="true" text="Show Data" toggleGroup="$grupa3">
+                                       <padding>
+                                          <Insets left="10.0" top="10.0" />
+                                       </padding>
+                                    </RadioButton>
+                                    <Region prefHeight="30.0" prefWidth="173.0" HBox.hgrow="ALWAYS" />
+                                    <Button fx:id="Hill_Submit" mnemonicParsing="false" text="Submit">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button fx:id="Hill_Clear" layoutX="481.0" layoutY="20.0" mnemonicParsing="false" text="Clear">
+                                       <HBox.margin>
+                                          <Insets top="5.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" top="5.0" />
+                                 </padding>
+                              </HBox>
+                              <Pane layoutY="138.0" prefHeight="313.0" prefWidth="694.0">
+                                 <children>
+                                    <Pane fx:id="Hill_UpdatePane" prefHeight="70.0" prefWidth="694.0" visible="false">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="36.0" prefWidth="694.0" spacing="5.0">
+                                             <children>
+                                                <Label fx:id="Hill_IdUpdateLabel" text="ID">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="Hill_IDUpdate" prefHeight="25.0" prefWidth="41.0" promptText="ID">
+                                                   <HBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label fx:id="Hill_NameUpdateLabel" layoutX="20.0" layoutY="15.0" text="Name of hill">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="Hill_NameUpdateField" prefHeight="25.0" prefWidth="117.0" promptText="Name of hill">
+                                                   <HBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label fx:id="Hill_KPointUpdateLabel" layoutX="81.0" layoutY="15.0" text="K Point">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="Hill_KPointUpdateField" layoutX="117.0" layoutY="12.0" prefHeight="25.0" prefWidth="117.0" promptText="K Point">
+                                                   <HBox.margin>
+                                                      <Insets bottom="-2.0" top="2.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label fx:id="Hill_CityUpdateLabel" text="City">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                </Label>
+                                                <TextField fx:id="Hill_UpdateCityField" prefHeight="25.0" prefWidth="117.0" promptText="City" />
+                                             </children>
+                                             <opaqueInsets>
+                                                <Insets left="5.0" right="5.0" />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" />
+                                             </padding>
+                                          </HBox>
+                                          <HBox alignment="CENTER" layoutY="30.0" prefHeight="30.0" prefWidth="694.0" spacing="5.0">
+                                             <children>
+                                                <Label fx:id="Hill_LengthUpdateLabel" text="Length">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="Hill_LengthUpdateField" prefHeight="25.0" prefWidth="153.0" promptText="Length">
+                                                   <HBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                                <Label fx:id="Hill_DateUpdateLabel" layoutX="235.0" layoutY="19.0" text="Date of create">
+                                                   <HBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <DatePicker fx:id="Hill_DatePickerUpdate" promptText="Date of create">
+                                                   <HBox.margin>
+                                                      <Insets top="2.0" />
+                                                   </HBox.margin>
+                                                </DatePicker>
+                                             </children>
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" top="6.0" />
+                                             </padding>
+                                          </HBox>
+                                          <Label fx:id="Hill_UpdateLabel" alignment="CENTER" contentDisplay="CENTER" text="New Values" textAlignment="CENTER" translateX="319.0" translateY="-21.0" visible="false" />
+                                       </children>
+                                    </Pane>
+                                    <TableView fx:id="Hill_Table" layoutX="1.0" prefHeight="319.0" prefWidth="692.0">
+                                       <contextMenu>
+                                          <ContextMenu fx:id="HillContext_Menu">
+                                            <items>
+                                              <MenuItem fx:id="HillContext_Delete" mnemonicParsing="false" onAction="#deleteFromContext" text="Delete" />
+                                                <MenuItem fx:id="HillContext_Clear" mnemonicParsing="false" onAction="#clearTables" text="Clear" />
+                                            </items>
+                                          </ContextMenu>
+                                       </contextMenu></TableView>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+      <Pane layoutX="-1.0" layoutY="514.0" prefHeight="33.0" prefWidth="694.0">
+         <children>
+            <TextArea fx:id="SystemMessages" layoutX="1.0" layoutY="5.0" prefHeight="40.0" prefWidth="694.0" promptText="System Messages" wrapText="true">
+               <padding>
+                  <Insets left="2.0" top="5.0" />
+               </padding>
+               <effect>
+                  <ColorAdjust />
+               </effect>
+            </TextArea>
+         </children>
+      </Pane>
+      <Label fx:id="DBDiodeOn" layoutX="675.0" layoutY="-8.0" text="●" visible="false">
+         <font>
+            <Font size="26.0" />
+         </font>
+         <padding>
+            <Insets top="1.0" />
+         </padding>
+         <textFill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.5904761904761905" endY="1.0" startX="0.22857142857142856" startY="0.7095238095238094">
+               <stops>
+                  <Stop color="#00fa04" />
+                  <Stop color="#00fa04" offset="0.007662835249042145" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="DBDiodeOff" layoutX="675.0" layoutY="-8.0" text="●">
+         <font>
+            <Font size="26.0" />
+         </font>
+         <padding>
+            <Insets top="1.0" />
+         </padding>
+         <textFill>
+            <LinearGradient cycleMethod="REFLECT" endX="0.5904761904761905" endY="1.0" startX="0.22857142857142856" startY="0.7095238095238094">
+               <stops>
+                  <Stop color="#fc0000" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+</Pane>
